@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website AF Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di AF Cafe</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="info">
+            <h2>Informasi AF Cafe</h2>
+            <p>Di sini Anda dapat mengenal apa itu AF Cafe.</p>
+        </section>
+
+        <section class="tips">
+            <h2>Ingat jangan lupa kalau ke AF Cafe</h2>
+            <ul>
+                <li>Jangan Lupa Bawa Uang.</li>
+                <li>Gunakan Pakaian Yang Sopan.</li>
+                <li>Nongkrong Sampai Tutup.</li>
+                <li>Ajak Banyak Teman.</li>
+                <li>Pesan Yang Banyak biar Owner Punya Uang.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; AFCofe. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript untuk logout -->
+    <script>
+        function logout() {
+            alert("Anda telah logout.");
+            window.location.href = "index.html"; // Kembali ke halaman login
+        }
+    </script>
+</body>
+</html>

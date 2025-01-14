@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AF Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Daftar Akun Baru</h1>
+    </header>
+
+    <main class="register-form">
+        <form class="form" method="POST">
+            <label for="new_username">Nama Pengguna:</label>
+            <input type="text" id="new_username" name="new_username" required>
+
+            <label for="new_password">Kata Sandi:</label>
+            <input type="password" id="new_password" name="new_password" required>
+
+            <button type="submit">Daftar</button>
+
+            <p>Sudah punya akun? <a href="index.html">Login di sini</a></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; AF Cafe. Semua hak dilindungi.</p>
+    </footer>
+    <script>
+        document.querySelector("form").addEventListener("submit", daftar);
+        async function daftar(ev) {
+            ev.preventDefault();
+            const new_username = document.getElementById("new_username").value;
+            const new_password = document.getElementById("new_password").value;
+            const response = await fetch ("http://localhost:3000/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: new_username,
+                    password: new_password
+                })
+            });
+            const data = await response.json();
+            console.log(data);
+            if (response.status === 201) {
+                alert("Registrasi berhasil!");
+                window.location.href = "index.html";
+            } else {
+                alert("Registrasi gagal!");
+            }
+            
+            register(new_username, new_password);
+        }
+    </script>
+</body>
+</html>

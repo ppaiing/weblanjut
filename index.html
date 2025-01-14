@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AF Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Login ke AF Cafe</h1>
+    </header>
+
+    <div id="form" class="login-form">
+        <form id="form" class="POST">
+            <label for="username">Nama Pengguna:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Kata Sandi:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+
+            <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+        </form>
+        <script src="script.js"></script>
+        <script>
+            document.getElementById("form").addEventListener("submit",masuk);
+            async function masuk(ev) {
+                ev.preventDefault();
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                login(username, password);
+                
+            }
+        </script>
+    </div>
+    <footer>
+        <p>&copy; AF Cafe. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
