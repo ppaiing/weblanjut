@@ -20,7 +20,7 @@ async function login(username, password) {
       alert("Username atau Password salah.");
       return;
     }
-    alert("Berhasil Login");
+    // alert("Berhasil Login");
     window.location.href = "./welcome.html";
     return json;
   } catch (error) {
