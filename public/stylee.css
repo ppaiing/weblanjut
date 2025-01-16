@@ -6,7 +6,8 @@
 
 body {
   display: flex;
-  background-color: #f6f5f7;
+  background-color: #a0a6a7;
+  /* background: linear-gradient(180deg, #000000, #aad2ba); */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -164,9 +165,9 @@ input {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  width: 1200px;
+  width: 890px;
   max-width: 100%;
-  min-height: 800px;
+  min-height: 500px;
 }
 
 .form-container {
@@ -233,7 +234,9 @@ input {
   background-image: url("image.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 0;
+  background-position: center -180px;
+  /* clip-path: inset(-500px 0 0 0); */
+  transform: translateY(550px);
   color: #fff;
   position: relative;
   left: -100%;
