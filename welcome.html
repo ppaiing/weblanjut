@@ -3,14 +3,129 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website AF Cafe</title>
+    <title>AF Cafe - Kopi Enak, Suasana Nyaman</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./public/style.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f8f8;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 20px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        padding: 10px;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover {
+        color: #e67e22;
+      }
+      main {
+        padding: 40px 20px;
+        background: #ecf0f1;
+      }
+      .info {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      .info h2 {
+        font-size: 2em;
+        color: #34495e;
+      }
+      .info p {
+        font-size: 1.1em;
+        color: #7f8c8d;
+      }
+      .tips ul {
+        list-style: none;
+        padding: 0;
+      }
+      .tips ul li {
+        background: #fff;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 1.2em;
+        border-left: 5px solid #e67e22;
+        transition: background 0.3s;
+      }
+      .tips ul li:hover {
+        background: #f1c40f;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .menu-item {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .menu-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .menu-item h3 {
+        margin-top: 15px;
+        color: #34495e;
+      }
+      .menu-item p {
+        font-size: 1.1em;
+        color: #7f8c8d;
+      }
+      .menu-item:hover {
+        transform: translateY(-10px);
+      }
+      footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Selamat Datang di AF Cafe</h1>
+      <h1 id="home">Selamat Datang di AF Cafe</h1>
       <nav>
         <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#panduan">Panduan</a></li>
+          <li><a href="#menu">Menu</a></li>
           <li><a href="#" onclick="logout()">Logout</a></li>
         </ul>
       </nav>
@@ -18,30 +133,54 @@
 
     <main>
       <section class="info">
-        <h2>Informasi AF Cafe</h2>
-        <p>Di sini Anda dapat mengenal apa itu AF Cafe.</p>
+        <h2>AF Cafe - Kopi & Suasana yang Nyaman</h2>
+        <p>
+          Selamat datang di AF Cafe! Nikmati kopi terbaik dengan suasana yang
+          nyaman bersama teman atau keluarga. Kami menyajikan berbagai jenis
+          kopi dengan kualitas terbaik, siap menemani aktivitas Anda setiap
+          hari.
+        </p>
       </section>
 
-      <section class="tips">
-        <h2>Ingat jangan lupa kalau ke AF Cafe</h2>
+      <section id="panduan" class="tips">
+        <h2>Panduan AF Cafe</h2>
         <ul>
-          <li>Jangan Lupa Bawa Uang.</li>
-          <li>Gunakan Pakaian Yang Sopan.</li>
-          <li>Nongkrong Sampai Tutup.</li>
-          <li>Ajak Banyak Teman.</li>
-          <li>Pesan Yang Banyak biar Owner Punya Uang.</li>
+          <li>Jangan Lupa Bawa Uang untuk Pembayaran Kopi.</li>
+          <li>Gunakan Pakaian Yang Sopan dan Nyaman.</li>
+          <li>Nongkrong Sampai Tutup, Jangan Khawatir!</li>
+          <li>Ajak Banyak Teman untuk Menambah Keasyikan.</li>
+          <li>Pesan Banyak Kopi, Biar Owner Juga Senang!</li>
         </ul>
+      </section>
+
+      <section id="menu" class="menu">
+        <div class="menu-item">
+          <img src="./public/arabika.jpg" alt="Kopi Arabica" />
+          <h3>Kopi Arabica</h3>
+          <p>Rasa kopi yang lembut dan kaya, cocok untuk teman kerja Anda.</p>
+        </div>
+        <div class="menu-item">
+          <img src="./public/americano.jpg" alt="Kopi Americano" />
+          <h3>Kopi Americano</h3>
+          <p>Rasa kopi yang kuat dan berani, untuk penggemar kopi sejati.</p>
+        </div>
+        <div class="menu-item">
+          <img src="./public/expresso.jpg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>
+            Kopi hitam pekat yang menyegarkan, pilihan favorit banyak orang.
+          </p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; AFCofe. Semua hak dilindungi.</p>
+      <p>&copy; 2025 AF Cafe. Semua hak dilindungi.</p>
     </footer>
 
-    <!-- JavaScript untuk logout -->
     <script>
       function logout() {
-        alert(" Do you want to logout.");
+        alert(" Do you want to logout. ");
         window.location.href = "index.html"; // Kembali ke halaman login
       }
     </script>
